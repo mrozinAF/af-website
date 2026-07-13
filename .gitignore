@@ -27,3 +27,12 @@
 
 # Dotenv and similar local-only files
 *.local
+
+# Source assets & design handoffs (kept in Sanity, not in git — root-level only)
+/*.zip
+/*.mp4
+/*.mov
+/*.png
+/*.jpeg
+/*.jpg
+/changes.html

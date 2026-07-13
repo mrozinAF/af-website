@@ -12,6 +12,13 @@ export default defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: 'accent',
+      title: 'Highlighted words',
+      type: 'string',
+      description:
+        'Optional: the trailing words of the heading to show in the accent colour (e.g. "AI era.").',
+    }),
+    defineField({
       name: 'body',
       title: 'Body',
       type: 'text',
