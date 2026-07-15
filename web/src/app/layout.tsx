@@ -29,19 +29,39 @@ export const metadata: Metadata = {
 }
 
 type NavItem = {label?: string; slug?: string}
-type NavData = {nav?: NavItem[]; navCta?: NavItem} | null
+type NavData = {
+  settings?: {nav?: NavItem[]; navCta?: NavItem} | null
+  pages?: NavItem[]
+} | null
 
 const toLink = (n?: NavItem): NavLink | null =>
   n?.label && n?.slug
     ? {href: n.slug === 'home' ? '/' : `/${n.slug}`, label: n.label}
     : null
 
+// The menu builds itself from the pages: the editor's curated order first, then
+// any page not already listed auto-appended at the end (oldest→newest). The CTA
+// page (Apply) is excluded here and pinned separately by the Header/Footer.
+// Deleted pages fall out automatically — their links resolve to no slug.
 async function getNav(): Promise<{links: NavLink[]; cta: NavLink | null}> {
   try {
     const {data} = await sanityFetch({query: NAV_QUERY})
     const d = data as NavData
-    const links = (d?.nav ?? []).map(toLink).filter(Boolean) as NavLink[]
-    return {links: links.length ? links : DEFAULT_LINKS, cta: toLink(d?.navCta)}
+    const cta = toLink(d?.settings?.navCta)
+    const ctaSlug = d?.settings?.navCta?.slug
+
+    const curated = (d?.settings?.nav ?? []).filter(
+      (n): n is NavItem & {slug: string} =>
+        typeof n?.slug === 'string' && n.slug !== ctaSlug,
+    )
+    const listed = new Set(curated.map((n) => n.slug))
+    const appended = (d?.pages ?? []).filter(
+      (p): p is NavItem & {slug: string} =>
+        typeof p?.slug === 'string' && p.slug !== ctaSlug && !listed.has(p.slug),
+    )
+
+    const links = [...curated, ...appended].map(toLink).filter(Boolean) as NavLink[]
+    return {links: links.length ? links : DEFAULT_LINKS, cta}
   } catch {
     return {links: DEFAULT_LINKS, cta: null}
   }
