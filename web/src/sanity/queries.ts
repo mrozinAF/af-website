@@ -167,15 +167,19 @@ export const OTHER_PAGE_SLUGS_QUERY = defineQuery(`
   *[_type == "page" && defined(slug.current) && slug.current != "home"].slug.current
 `)
 
-export const NAV_QUERY = defineQuery(`
-  *[_id == "siteSettings"][0]{
-    nav[]{
-      label,
-      "slug": page->slug.current
-    },
-    navCta{
-      label,
-      "slug": page->slug.current
-    }
+// Navigation is derived from the pages themselves so the menu stays in sync:
+//  - `settings.nav` gives the curated order for pages the editor has arranged;
+//  - `pages` is every page (oldest→newest) so any page NOT in the curated list
+//    auto-appends at the end, and deleted pages simply disappear;
+//  - `navCta` is the pinned button (e.g. Apply), always rendered last.
+// The merge (curated first, then auto-appended, CTA excluded) happens in layout.tsx.
+export const NAV_QUERY = defineQuery(`{
+  "settings": *[_id == "siteSettings"][0]{
+    nav[]{label, "slug": page->slug.current},
+    navCta{label, "slug": page->slug.current}
+  },
+  "pages": *[_type == "page" && defined(slug.current)] | order(_createdAt asc){
+    "label": name,
+    "slug": slug.current
   }
-`)
+}`)

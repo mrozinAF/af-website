@@ -13,9 +13,10 @@ export default defineType({
   fields: [
     defineField({
       name: 'nav',
-      title: 'Navigation menu',
+      title: 'Navigation menu order',
       type: 'array',
-      description: 'The links in the top menu and footer. Drag to reorder; each points at a page.',
+      description:
+        'Every page shows in the top menu and footer automatically. This list only sets the ORDER: drag to arrange the pages you care about. Any page not listed here appears at the end (newest last), just before the Apply button. Note: removing a page here does NOT hide it — it just moves to the end. To take a page off the site, unpublish or delete the page itself.',
       of: [
         defineArrayMember({
           type: 'object',
