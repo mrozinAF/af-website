@@ -7,7 +7,8 @@ import {CaseIcon} from '@sanity/icons'
  */
 export default defineType({
   name: 'jobListings',
-  title: 'Job listings',
+  title: 'Job Listings (Automatic)',
+  description: 'Automatically lists every Job Posting, newest first, with an intro above. Add or remove Job Postings to change what appears — you do not edit the roles here.',
   type: 'object',
   icon: CaseIcon,
   fields: [

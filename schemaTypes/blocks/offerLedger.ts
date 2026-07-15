@@ -4,7 +4,8 @@ import {OlistIcon} from '@sanity/icons'
 /** Numbered 01–NN ledger of offers, with an optional wide image below. */
 export default defineType({
   name: 'offerLedger',
-  title: 'Offer ledger',
+  title: 'Offer Ledger (Numbered List)',
+  description: 'A numbered 01–NN list of things you offer, each with an optional sub-line, plus an optional wide photo below. Use to spell out benefits (e.g. what Fellows get).',
   type: 'object',
   icon: OlistIcon,
   fields: [

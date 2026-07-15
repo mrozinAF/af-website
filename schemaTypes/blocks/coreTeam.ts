@@ -7,7 +7,8 @@ import {UsersIcon} from '@sanity/icons'
  */
 export default defineType({
   name: 'coreTeam',
-  title: 'Core team cards',
+  title: 'Team Cards (Automatic)',
+  description: 'Automatically shows every Person as a photo card with their role, name, credentials, and bio. Add or remove People to change who appears — you do not edit this block directly.',
   type: 'object',
   icon: UsersIcon,
   fields: [

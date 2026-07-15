@@ -8,7 +8,8 @@ import {HelpCircleIcon} from '@sanity/icons'
  */
 export default defineType({
   name: 'accordion',
-  title: 'Dropdown section',
+  title: 'Dropdowns (FAQ / Expandable)',
+  description: 'A stack of expandable rows — readers click a question to reveal the answer. Great for FAQs or extra detail you want to keep tucked away.',
   type: 'object',
   icon: HelpCircleIcon,
   fields: [

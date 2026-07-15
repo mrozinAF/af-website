@@ -4,7 +4,8 @@ import {DocumentTextIcon} from '@sanity/icons'
 /** Fellowship application detail — intro + Terms / Eligibility / How to apply. */
 export default defineType({
   name: 'fellowshipDetail',
-  title: 'Fellowship detail',
+  title: 'Fellowship Details (Terms / Eligibility / Apply)',
+  description: 'The application details for the fellowship: cohort terms, eligibility, how to apply, and an apply button. Use on the Fellows or Apply page.',
   type: 'object',
   icon: DocumentTextIcon,
   fields: [

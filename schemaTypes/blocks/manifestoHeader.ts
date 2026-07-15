@@ -4,7 +4,8 @@ import {SquareIcon} from '@sanity/icons'
 /** Multi-line manifesto header over the constellation field (For Businesses). */
 export default defineType({
   name: 'manifestoHeader',
-  title: 'Manifesto header (constellation)',
+  title: 'Manifesto Header',
+  description: 'A large multi-line statement over the animated navy background, with selected lines highlighted in the accent colour. Use as a bold page opener.',
   type: 'object',
   icon: SquareIcon,
   fields: [

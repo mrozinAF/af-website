@@ -4,7 +4,8 @@ import {ThLargeIcon} from '@sanity/icons'
 /** Three routing cards (Students / Careers / Companies) that lift on hover. */
 export default defineType({
   name: 'pathCards',
-  title: 'Path cards',
+  title: 'Path Cards (Audience Routing)',
+  description: 'Three cards that lift on hover, each pointing a different audience (e.g. Students / Careers / Companies) to the right place. Use to route visitors.',
   type: 'object',
   icon: ThLargeIcon,
   fields: [

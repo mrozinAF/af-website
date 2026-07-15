@@ -4,7 +4,8 @@ import {TextIcon} from '@sanity/icons'
 /** Simple centered-column text section: eyebrow + heading + paragraphs. */
 export default defineType({
   name: 'textSection',
-  title: 'Text section (eyebrow + heading + paragraphs)',
+  title: 'Text Section',
+  description: 'A simple centred column of text: a small eyebrow label, a heading, and one or more paragraphs. Use for straightforward written content.',
   type: 'object',
   icon: TextIcon,
   fields: [

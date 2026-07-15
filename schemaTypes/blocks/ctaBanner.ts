@@ -4,7 +4,8 @@ import {RocketIcon} from '@sanity/icons'
 /** Navy call-to-action strip with a heading and up to two buttons. */
 export default defineType({
   name: 'ctaBanner',
-  title: 'CTA banner',
+  title: 'Call-to-Action Banner',
+  description: 'A bold navy strip with a heading and up to two buttons, prompting the reader to act (e.g. "Apply now"). Usually placed at the bottom of a page.',
   type: 'object',
   icon: RocketIcon,
   fields: [

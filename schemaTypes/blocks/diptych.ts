@@ -4,7 +4,8 @@ import {SplitHorizontalIcon} from '@sanity/icons'
 /** Two joined panels with a central AF node (navy). */
 export default defineType({
   name: 'diptych',
-  title: 'Diptych (two panels)',
+  title: 'Two-Panel Split',
+  description: 'Two joined panels with a central "AF" node between them. Use to present two related ideas side by side.',
   type: 'object',
   icon: SplitHorizontalIcon,
   fields: [
