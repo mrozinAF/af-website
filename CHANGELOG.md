@@ -16,6 +16,26 @@ history.
 
 ## [2026-07-15] — Mark Rozin
 
+**Studio editor experience**
+- The page **Slug** (web address) is now **required** and generated from the page
+  name (the "Generate" button). A page can no longer be published without one.
+- **Why:** A page saved without a slug has no URL and silently won't appear in
+  the menu — this is what happened with a re-created Events page. Requiring it
+  prevents the confusion entirely.
+- Added four **page templates** editors can pick when creating a page — *Fellows
+  Page*, *For Businesses Page*, *Info / Vision Page*, and *Coming Soon Page* —
+  each pre-filled with the right sections (from the real pages) and placeholder
+  text telling the editor what to write.
+- Gave every content section a **plain-English name and a short description** in
+  the Studio (e.g. "Call-to-Action Banner", "Team Grid (Automatic)") so
+  non-technical editors can tell blocks apart.
+- Documented which sections belong on each page type in CONTENT-GUIDE.md.
+- **Why:** So editors can create good-looking pages themselves without a
+  developer, and aren't faced with 25 cryptic, empty blocks.
+- *Note:* the Studio can't yet limit the "Add item" list to only a page's
+  relevant blocks — that would need separate page types (a larger change). For
+  now the relevant sets are documented as a cheat-sheet.
+
 **Features**
 - The navigation menu (header **and** footer) now builds itself from the pages.
   Any published page appears automatically at the end of the menu; deleting a
