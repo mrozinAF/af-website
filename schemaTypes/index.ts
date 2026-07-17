@@ -27,6 +27,7 @@ import compareColumns from './blocks/compareColumns'
 import comingSoonHero from './blocks/comingSoonHero'
 import pathCards from './blocks/pathCards'
 import fellowshipDetail from './blocks/fellowshipDetail'
+import eventScoreboard from './blocks/eventScoreboard'
 
 const {defineCta, defineImage, definePage, defineRichText} = createPresetsRegistry({
   link: {to: ['page']},
@@ -60,6 +61,7 @@ const pageType = definePage({
     'peopleGrid',
     'videoTestimonials',
     'jobListings',
+    'eventScoreboard',
     'ctaBanner',
     'cta',
   ],
@@ -76,11 +78,32 @@ const page = {
     field.name === 'slug'
       ? {
           ...field,
-          options: {...(field.options ?? {}), source: 'name'},
-          validation: (rule: {required: () => {error: (message: string) => unknown}}) =>
-            rule
-              .required()
-              .error('Add a web address (slug) — click “Generate” to make one from the page name.'),
+          options: {
+            ...(field.options ?? {}),
+            source: 'name',
+            // Auto-trim + normalise, so stray spaces can't sneak into a slug
+            // (a trailing space once broke a page's URL — see CHANGELOG).
+            slugify: (input: string) =>
+              input
+                .trim()
+                .toLowerCase()
+                .replace(/\s+/g, '-')
+                .replace(/[^a-z0-9-]/g, '')
+                .slice(0, 96),
+          },
+          // Block publishing an empty or space-padded slug: an empty/broken slug
+          // gives the page no URL and hides it from the auto-built menu.
+          validation: (rule: {
+            custom: (fn: (value: {current?: string} | undefined) => true | string) => unknown
+          }) =>
+            rule.custom((value) => {
+              const current = value?.current
+              if (!current)
+                return 'Add a web address (slug) — click “Generate” to make one from the page name.'
+              if (current.trim() !== current)
+                return 'Remove the space at the start or end of the web address.'
+              return true
+            }),
         }
       : field,
   ),
@@ -97,6 +120,7 @@ export const schemaTypes = [
   peopleGrid,
   videoTestimonials,
   jobListings,
+  eventScoreboard,
   pageHeader,
   coreTeam,
   expertNetwork,

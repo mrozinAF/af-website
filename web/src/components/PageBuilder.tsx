@@ -24,6 +24,7 @@ import ImageBlock from './blocks/ImageBlock'
 import PeopleGrid from './blocks/PeopleGrid'
 import VideoTestimonials from './blocks/VideoTestimonials'
 import JobListings from './blocks/JobListings'
+import EventScoreboard from './blocks/EventScoreboard'
 import CtaButton from './CtaButton'
 import type {PageBlock} from '@/sanity/types'
 
@@ -94,6 +95,8 @@ export default function PageBuilder({
             return <VideoTestimonials key={block._key} block={block} />
           case 'jobListings':
             return <JobListings key={block._key} block={block} />
+          case 'eventScoreboard':
+            return <EventScoreboard key={block._key} block={block} />
           case 'cta':
             return (
               <section key={block._key} className="section section--cta">

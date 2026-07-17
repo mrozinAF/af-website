@@ -303,6 +303,15 @@ export type JobListingsBlock = {
   jobs?: Job[]
 }
 
+export type EventScoreboardBlock = {
+  _type: 'eventScoreboard'
+  _key: string
+  dataEndpoint?: string
+  videoId?: string
+  brandLogoUrl?: string
+  streamLive?: boolean
+}
+
 export type CtaBlock = Cta & {_key: string}
 
 export type PageBlock =
@@ -331,6 +340,7 @@ export type PageBlock =
   | PeopleGridBlock
   | VideoTestimonialsBlock
   | JobListingsBlock
+  | EventScoreboardBlock
   | CtaBlock
 
 export type Page = {
