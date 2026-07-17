@@ -5,6 +5,8 @@ export default defineCliConfig({
     projectId: 'xk0vwazc',
     dataset: 'production'
   },
+  // Hosted Studio address: https://ascendancefoundry.sanity.studio
+  studioHost: 'ascendancefoundry',
   deployment: {
     /**
      * Enable auto-updates for studios.
