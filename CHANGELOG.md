@@ -14,6 +14,29 @@ history.
 
 ---
 
+## [2026-07-17] — Mark Rozin
+
+**Features**
+- Added the **Events page** with a live **tournament scoreboard** section
+  (stream, sponsor marquee, leaderboards, and bracket) driven by an external
+  live data feed — the "Launch for Care Invitational" widget from the design —
+  plus a small "Check out our Summer Camp!" callout. The standalone Summer Camp
+  page was merged into Events and removed.
+- **Why:** Brings the live event experience onto the site and consolidates
+  Summer Camp (whose details now live on a separate website).
+
+**Fixes**
+- Page slugs now **auto-trim and normalise** (lowercase, spaces → hyphens), and
+  a slug with stray spaces can no longer be published.
+- **Why:** A trailing space in a slug had silently broken a page's URL.
+
+**Tooling**
+- Upgraded **Sanity Studio to 6.5.0** (from 6.3.0) to match the auto-update
+  runtime, with a clean reinstall to fix a broken post-upgrade module state.
+- **Why:** Keeps local versions in sync with what's served at runtime.
+
+---
+
 ## [2026-07-15] — Mark Rozin
 
 **Studio editor experience**
