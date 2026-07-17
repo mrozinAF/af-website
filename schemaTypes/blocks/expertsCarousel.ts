@@ -4,7 +4,8 @@ import {UsersIcon} from '@sanity/icons'
 /** Experts carousel — 3 visible at a time, arrows page through all with wraparound. */
 export default defineType({
   name: 'expertsCarousel',
-  title: 'Experts carousel',
+  title: 'Experts Carousel',
+  description: 'A sliding row of expert cards (photo + bio), three visible at a time, with arrows to page through the rest. Use to showcase advisors or mentors.',
   type: 'object',
   icon: UsersIcon,
   fields: [

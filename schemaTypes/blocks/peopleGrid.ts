@@ -8,7 +8,8 @@ import {UsersIcon} from '@sanity/icons'
  */
 export default defineType({
   name: 'peopleGrid',
-  title: 'People grid',
+  title: 'Team Grid (Automatic)',
+  description: 'Automatically shows every Person in a grid with photo, name, role, and bio. Add or remove People to change who appears — you do not edit this block directly.',
   type: 'object',
   icon: UsersIcon,
   fields: [

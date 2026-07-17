@@ -4,7 +4,8 @@ import {BlockContentIcon} from '@sanity/icons'
 /** "What we do" — capability boxes on the left, a tall photo on the right. */
 export default defineType({
   name: 'capabilities',
-  title: 'Capabilities + photo',
+  title: 'Capabilities + Photo',
+  description: 'A set of "what we do" boxes on the left beside a tall photo on the right. Use to summarise your services or offerings.',
   type: 'object',
   icon: BlockContentIcon,
   fields: [

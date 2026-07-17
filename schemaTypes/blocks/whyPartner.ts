@@ -4,7 +4,8 @@ import {StarIcon} from '@sanity/icons'
 /** Navy "why partner" section — big outlined numerals with keyword rows. */
 export default defineType({
   name: 'whyPartner',
-  title: 'Why partner (numbered rows)',
+  title: 'Why Partner (Numbered Rows)',
+  description: 'A navy section with big outlined numerals and keyword rows explaining reasons to work with you. Use on the For Businesses page.',
   type: 'object',
   icon: StarIcon,
   fields: [

@@ -7,7 +7,8 @@ import {BlockContentIcon} from '@sanity/icons'
  */
 export default defineType({
   name: 'fellowsIntro',
-  title: 'Fellows intro',
+  title: 'Fellows Intro (Recruit + What They Do)',
+  description: 'The Fellows-page introduction: a "who we recruit" block and a "what Fellows do" block with a short two-phase timeline. Use once near the top of the Fellows page.',
   type: 'object',
   icon: BlockContentIcon,
   fields: [

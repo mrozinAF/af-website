@@ -7,7 +7,8 @@ import {SquareIcon} from '@sanity/icons'
  */
 export default defineType({
   name: 'pageHeader',
-  title: 'Page header (constellation)',
+  title: 'Page Header',
+  description: 'A large centred page title (with an optional tagline) over the animated navy background. Use as the first block on most interior pages.',
   type: 'object',
   icon: SquareIcon,
   fields: [

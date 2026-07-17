@@ -4,7 +4,8 @@ import {UlistIcon} from '@sanity/icons'
 /** Navy "Expert Network" panel — heading, intro, and boxed supports. */
 export default defineType({
   name: 'expertNetwork',
-  title: 'Expert Network panel',
+  title: 'Expert Network Panel',
+  description: 'A navy panel with a heading, intro, and a set of boxed "supports". Use to describe the mentors and experts backing the program.',
   type: 'object',
   icon: UlistIcon,
   fields: [

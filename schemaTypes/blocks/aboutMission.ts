@@ -7,7 +7,8 @@ import {BulbOutlineIcon} from '@sanity/icons'
  */
 export default defineType({
   name: 'aboutMission',
-  title: 'About + Mission',
+  title: 'About & Mission Section',
+  description: 'A two-column editorial section pairing your beliefs with a mission statement and a wide photo. Use near the top of a page to introduce what the company stands for.',
   type: 'object',
   icon: BulbOutlineIcon,
   fields: [

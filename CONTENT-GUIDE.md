@@ -62,20 +62,42 @@ document's history.
 
 ---
 
-## 4. Adding a new page
+## 4. Adding a new page (from a template)
 
-1. In **Pages**, click **Create** (top of the list). Choose **"Page — starter
-   layout"** — it pre-fills a tidy starting scaffold (a header, an intro
-   paragraph, an image, and a call-to-action) so you're not staring at a blank
-   page.
-2. Fill in the **Name** (e.g. "Partners") and the **Slug** — the slug is the web
-   address, so "our-partners" makes the page live at `/our-partners`. Use
-   lowercase words separated by hyphens.
-3. Edit the sections as in §3, then **Publish**.
-4. **It's added to the menu automatically.** Once published, the page appears in
-   both the top menu and the footer on its own — at the end of the list, just
-   before the **Apply** button. You don't need to touch the navigation. Visit
-   Site Settings only if you want to *reorder* where it sits (see §8).
+The easiest way to build a page is to start from a **template** — a ready-made
+layout with the right sections already in place and **placeholder text telling
+you exactly what to write** (e.g. "Write your intro paragraph here"). You just
+swap the placeholders for your real words.
+
+1. In **Pages**, click **Create** (top of the list). Pick the template that best
+   matches what you're building:
+
+   | Template | Use it for | Sections it comes with |
+   |---|---|---|
+   | **Fellows Page** | A fellowship / programme page | Page Header → Fellows Intro → Fellow Video Testimonials → Offer Ledger → Call-to-Action Banner |
+   | **For Businesses Page** | A client / partner page | Manifesto Header → Capabilities + Photo → Why Partner → Call-to-Action Banner |
+   | **Info / Vision Page** | A simple info / about / vision page | Page Header → Text Section → Text Section → Call-to-Action Banner |
+   | **Coming Soon Page** | A page that isn't ready yet | Coming Soon Hero |
+   | **Page — starter layout** | A general, mostly-blank page | Page Header → intro text → image → Call-to-Action Banner |
+
+2. Give the page a **Name**, then set the **Slug** (the web address). Click the
+   **Generate** button next to the Slug field to create it automatically from the
+   name — e.g. "Our Partners" → `/our-partners`. **A page can't be published
+   without a slug**, so you can't skip this — and it's exactly what the page needs
+   to get a URL and appear in the menu.
+3. Work through each section top to bottom, replacing the placeholder text with
+   your real content and uploading any images. Delete sections you don't need
+   (each section's "⋮" menu), or add more with **Add item**.
+4. **Publish.**
+5. **It's added to the menu automatically** — at the end of the top menu and
+   footer, just before the **Apply** button (see §8). No need to touch the
+   navigation unless you want to *reorder* it.
+
+> **Which sections go on which page?** The table above shows the sections each
+> page type normally uses — a handy guide when you add more with **Add item**.
+> (The Add-item list currently shows *all* section types, not just the ones for
+> that page — so use the table as your cheat-sheet. Every section now has a
+> plain-English name and a short description to help you choose.)
 
 ---
 

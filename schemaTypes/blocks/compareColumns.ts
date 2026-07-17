@@ -4,7 +4,8 @@ import {SplitHorizontalIcon} from '@sanity/icons'
 /** Two side-by-side columns of diamond-bulleted items (e.g. do well / miss). */
 export default defineType({
   name: 'compareColumns',
-  title: 'Compare columns',
+  title: 'Compare Columns (Two Lists)',
+  description: 'Two side-by-side columns of diamond-bulleted points, each with its own colour accent. Use to contrast two things (e.g. what we do vs what others miss).',
   type: 'object',
   icon: SplitHorizontalIcon,
   fields: [

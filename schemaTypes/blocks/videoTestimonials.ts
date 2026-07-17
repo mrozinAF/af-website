@@ -7,7 +7,8 @@ import {PlayIcon} from '@sanity/icons'
  */
 export default defineType({
   name: 'videoTestimonials',
-  title: 'Video testimonials',
+  title: 'Video Testimonials Row',
+  description: 'A row of testimonial videos with quotes. Each takes an uploaded video or a YouTube/Vimeo link plus the person\'s name and role. Use to feature real voices.',
   type: 'object',
   icon: PlayIcon,
   fields: [

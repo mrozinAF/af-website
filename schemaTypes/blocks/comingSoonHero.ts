@@ -4,7 +4,8 @@ import {SquareIcon} from '@sanity/icons'
 /** Full-height "coming soon" hero over the constellation field. */
 export default defineType({
   name: 'comingSoonHero',
-  title: 'Coming-soon hero',
+  title: 'Coming Soon Hero',
+  description: 'A full-height "coming soon" banner over the animated navy background, with a title, short description, and an optional boxed note. Use for pages that are not ready yet.',
   type: 'object',
   icon: SquareIcon,
   fields: [

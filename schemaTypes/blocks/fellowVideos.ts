@@ -7,7 +7,8 @@ import {PlayIcon} from '@sanity/icons'
  */
 export default defineType({
   name: 'fellowVideos',
-  title: 'Fellow video testimonials',
+  title: 'Fellow Video Testimonials',
+  description: 'A navy section of tall (portrait) video tiles from Fellows. Each tile takes an uploaded video or a link. Use on the Fellows page to build credibility.',
   type: 'object',
   icon: PlayIcon,
   fields: [
