@@ -2767,6 +2767,9 @@ h3 {
   justify-content: space-between;
   gap: 24px 40px;
   flex-wrap: wrap;
+  /* Full width with only an edge gutter, so the brand sits in the bottom-left
+     corner and the last link (Apply) in the bottom-right corner. */
+  padding: 0 28px;
 }
 .footer-brand {
   display: inline-flex;
