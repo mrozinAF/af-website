@@ -6,7 +6,7 @@ export default function Footer({links, cta}: {links: NavLink[]; cta?: NavLink | 
   const allLinks = cta?.href && cta?.label ? [...links, cta] : links
   return (
     <footer className="site-footer">
-      <div className="container footer-bar">
+      <div className="footer-bar">
         <Link href="/" className="footer-brand" aria-label="Ascendance Foundry home">
           <span className="footer-tile">AF</span>
           <span className="footer-name">Ascendance Foundry</span>
